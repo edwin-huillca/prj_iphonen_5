@@ -16,9 +16,10 @@
 
 <gap:plugin name="org.apache.cordova.device" />
 <gap:plugin name="org.apache.cordova.geolocation" />
-
+<gap:plugin name="cordova-plugin-whitelist" source="npm" />
 
 <gap:plugin name="org.apache.cordova.splashscreen" />
 <gap:plugin name="org.apache.cordova.statusbar" />
-<access origin="*" subdomains="false"  />
+<access origin="*" subdomains="true"  />
+<allow-intent href="*" />
 </widget>
