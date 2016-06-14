@@ -23,7 +23,8 @@
       <h1>Utilice la rueda del ratón para hacer zoom sobre un punto focal</h1>
       <div class="parent">
         <div class="panzoom">
-          <img src="#" id="img_principal" width="900" height="900">
+          <img src="#" id="img_principal" width="500" height="300">
+          <img src="#" id="img_principal2" width="500" height="300">
         </div>
       </div>
       <script type="text/javascript">
@@ -32,8 +33,12 @@
           var path_img = "http://www.larocheapp.com/assets/images/lunares/img_0528050319.png";
           $("#img_principal").attr('src',path_img);
 
+          var path_img2 = "http://www.larocheapp.com/assets/images/lunares/img_0613103435.png";
+          $("#img_principal2").attr('src',path_img2);
+
           var $section = $('#focal');
-          var $panzoom = $section.find('.panzoom').panzoom();
+          var $panzoom = $section.find('.panzoom').panzoom({disablePan: true});
+
           $panzoom.parent().on('mousewheel.focal', function( e ) {
             e.preventDefault();
             var delta = e.delta || e.originalEvent.wheelDelta;
